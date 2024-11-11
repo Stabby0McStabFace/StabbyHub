@@ -1,4 +1,3 @@
--- Work In Progress
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
@@ -100,6 +99,7 @@ local Button = MiscTab:CreateButton({
    Name = "Infinite Yield",
    Callback = function()
       loadstring(game:HttpGet('https://raw.githubusercontent.com/DarkNetworks/Infinite-Yield/main/latest.lua'))()
+      end,
 })
 
 local Button = MiscTab:CreateButton({
@@ -108,3 +108,5 @@ Callback = function()
 Rayfield:Destroy()
 end,
 })
+
+-- Rayfield:Destroy() remove "--" to uncomment
