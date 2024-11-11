@@ -34,7 +34,7 @@ local Window = Rayfield:CreateWindow({
 
 local MainTab = Window:CreateTab("Main", nil) -- Title, Image
 local MainSection = MainTab:CreateSection("Movement")
-local MiscTab = Window:CreateTab("Misc")
+
 
 Rayfield:Notify({
 Title = "StabbyHub",
@@ -93,6 +93,15 @@ Flag = "sliderws", -- A flag is the identifier for the configuration file, make 
 Callback = function(Value)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
 end,
+})
+
+local MiscTab = Window:CreateTab("Misc")
+
+local Button = MiscTab:CreateButton({
+   Name = "Project Lazarus",
+   Callback = function()
+      loadstring(game:HttpGet('https://pastebin.com/raw/AmdBs5Bc'))()
+      end,
 })
 
 local Button = MiscTab:CreateButton({
