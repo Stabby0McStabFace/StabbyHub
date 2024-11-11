@@ -28,6 +28,36 @@ godModeButton.Position = UDim2.new(0, 10, 0, 110)
 godModeButton.Text = "Toggle God Mode"
 godModeButton.Parent = frame
 
+-- Making the menu movable
+local dragging = false
+local dragInput, dragStart, startPos
+
+local function updatePosition(input)
+    local delta = input.Position - dragStart
+    frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+end
+
+frame.InputBegan:Connect(function(input, gameProcessedEvent)
+    if gameProcessedEvent then return end
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        dragging = true
+        dragStart = input.Position
+        startPos = frame.Position
+    end
+end)
+
+frame.InputChanged:Connect(function(input)
+    if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+        updatePosition(input)
+    end
+end)
+
+frame.InputEnded:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        dragging = false
+    end
+end)
+
 speedButton.MouseButton1Click:Connect(function()
 end)
 
