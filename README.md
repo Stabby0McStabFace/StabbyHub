@@ -10,4 +10,4 @@ Welcome to the StabbyHub repository! This project provides a customizable cheat 
 
 > **Important:** This script is designed for testing purposes within **Roblox Studio**. Please ensure you’re using it in a private game environment to avoid violating Roblox's terms of service.
 
-Feel free to explore, modify, and contribute to this project!
+This is Beta, so expect a lot of bugs.
