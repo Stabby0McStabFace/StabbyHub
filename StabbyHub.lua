@@ -100,7 +100,7 @@ local MiscTab = Window:CreateTab("Misc")
 local Button = MiscTab:CreateButton({
    Name = "ESP / Wallhack",
    Callback = function()
-      loadstring(game:HttpGet('https://raw.githubusercontent.com/Stabby0McStabFace/StabbyHub/refs/heads/main/ESP.lua'))
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Stabby0McStabFace/StabbyHub/refs/heads/main/ESP.lua'))()
       end,
 })
 
