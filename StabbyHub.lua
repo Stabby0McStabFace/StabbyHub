@@ -85,7 +85,7 @@ end,
 
 local Slider = MainTab:CreateSlider({
 Name = "WalkSpeed",
-Range = {1, 1000},
+Range = {16, 1000},
 Increment = 1,
 Suffix = "Speed",
 CurrentValue = 16,
@@ -98,9 +98,23 @@ end,
 local MiscTab = Window:CreateTab("Misc")
 
 local Button = MiscTab:CreateButton({
-   Name = "Project Lazarus",
+   Name = "ESP / Wallhack",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Stabby0McStabFace/StabbyHub/refs/heads/main/ESP.lua', true))
+      end,
+})
+
+local Button = MiscTab:CreateButton({
+   Name = "Project Lazarus 1",
    Callback = function()
       loadstring(game:HttpGet('https://pastebin.com/raw/AmdBs5Bc'))()
+      end,
+})
+
+local Button = MiscTab:CreateButton({
+   Name = "Project Lazarus 2",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Cazzanos/The-basement/main/Basement%20hub', true))()
       end,
 })
 
