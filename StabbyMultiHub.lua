@@ -2,8 +2,8 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
     Name = "StabbyHub",
-    LoadingTitle = "StabbyHub",
-    LoadingSubtitle = "by Stabby McStabFace",
+    LoadingTitle = "By Stabby McStabFace",
+    LoadingSubtitle = "Multi-Use Hub",
     Theme = "DarkBlue", -- DarkBlue, Green, Light, Default - more coming soon!
  
     DisableRayfieldPrompts = false,
@@ -101,6 +101,13 @@ local Button = MiscTab:CreateButton({
    Name = "ESP / Wallhack",
    Callback = function()
       loadstring(game:HttpGet('https://raw.githubusercontent.com/Stabby0McStabFace/StabbyHub/refs/heads/main/ESP.lua'))()
+      end,
+})
+
+local Button = MiscTab:CreateButton({
+   Name = "Owl Hub / Universal",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Stabby0McStabFace/StabbyHub/refs/heads/main/OwlHub.lua'))()
       end,
 })
 
