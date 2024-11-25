@@ -119,6 +119,13 @@ local Button = MiscTab:CreateButton({
 })
 
 local Button = MiscTab:CreateButton({
+   Name = "Evade",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Stabby0McStabFace/StabbyHub/refs/heads/main/Evade.lua', true))()
+      end,
+})
+
+local Button = MiscTab:CreateButton({
    Name = "Project Lazarus 2",
    Callback = function()
       loadstring(game:HttpGet('https://raw.githubusercontent.com/Cazzanos/The-basement/main/Basement%20hub', true))()
